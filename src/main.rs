@@ -34,26 +34,4 @@ fn handle_connection(mut stream: TcpStream) {
 
     stream.write(response.as_bytes()).unwrap();
     stream.flush().unwrap();
-
-    // if buffer.starts_with(get) {
-    //     println!("Return html page");
-    //     let contents = fs::read_to_string("response_page/index.html").unwrap();
-
-    //     let response = format!(
-    //         "HTTP/1.1 200 OK\r\nContent-Length: {}\r\n\r\n{}",
-    //         contents.len(),
-    //         contents
-    //     );
-
-    //     stream.write(response.as_bytes()).unwrap();
-    //     stream.flush().unwrap();
-    // } else {
-    //     println!("Not returning html page");
-    //     let status_line = "HTTP/1.1 404 NOT FOUND\r\n\r\n";
-    //     let contents = fs::read_to_string("response_page/404.html").unwrap();
-    //     let response = format!("{}{}", status_line, contents);
-
-    //     stream.write(response.as_bytes()).unwrap();
-    //     stream.flush().unwrap();
-    // }
 }
